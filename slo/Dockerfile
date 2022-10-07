@@ -1,5 +1,7 @@
 FROM golang:1.19.2-bullseye AS build
 
+LABEL org.opencontainers.image.source=https://github.com/ShawnLabo/demos
+
 ENV CGO_ENABLED 0
 ENV GOOS linux
 ENV GOARCH amd64
