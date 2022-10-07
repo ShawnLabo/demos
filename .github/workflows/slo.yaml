@@ -4,11 +4,8 @@ on:
     branches:
       - main
     paths:
-      - 'slo/**'
+      # - 'slo/**'
 
-defaults:
-  run:
-    working-directory: slo
 
 jobs:
   build_and_push:
@@ -23,9 +20,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
-          context: .
+          context: slo/
           push: true
           tags: |
             ghcr.io/shawnlabo/demo-slo:latest
