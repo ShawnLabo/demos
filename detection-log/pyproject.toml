@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "detection-log"
+version = "0.1.0"
+description = ""
+authors = ["nownabe <nownabe@users.noreply.github.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^1.10.2"
+fastapi = "^0.85.1"
+uvicorn = {extras = ["standard"], version = "^0.18.3"}
+google-cloud-vision = "^3.1.4"
+google-cloud-pubsub = "^2.13.10"
+google-cloud-storage = "^2.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,9 @@
+**/__pycache__
+**/.dockerignore
+**/.envrc
+**/.gitignore
+**/*.md
+**/Dockerfile
+
+.venv
+examples
