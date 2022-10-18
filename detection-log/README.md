@@ -129,3 +129,15 @@ source .envrc
 poetry install
 poetry run python detect.py examples/ruby_and_ten.jpg
 ```
+
+## References
+
+* [IAM 権限の使用  |  Cloud Storage  |  Google Cloud](https://cloud.google.com/storage/docs/access-control/using-iam-permissions?hl=ja)
+* [オブジェクトのアップロード  |  Cloud Storage  |  Google Cloud](https://cloud.google.com/storage/docs/uploading-objects?hl=ja)
+* [クイックスタート: クライアント ライブラリを使用して Pub/Sub でメッセージをパブリッシュおよび受信する  |  Cloud Pub/Sub ドキュメント  |  Google Cloud](https://cloud.google.com/pubsub/docs/publish-receive-messages-client-library?hl=ja#python)
+* [プッシュ サブスクリプション  |  Cloud Pub/Sub ドキュメント  |  Google Cloud](https://cloud.google.com/pubsub/docs/push?hl=ja#receive_push)
+* [Using Pub/Sub with Cloud Run tutorial  |  Cloud Run Documentation  |  Google Cloud](https://cloud.google.com/run/docs/tutorials/pubsub#run_pubsub_handler-python)
+* [io --- ストリームを扱うコアツール — Python 3.10.6 ドキュメント](https://docs.python.org/ja/3/library/io.html#binary-i-o)
+* [Uvicorn](https://www.uvicorn.org/)
+* [python-storage/blob.py at main · googleapis/python-storage · GitHub](https://github.com/googleapis/python-storage/blob/97b4a962d3f64d8a34af5bfa494e700503f450c5/google/cloud/storage/blob.py#L2724-L2854)
+* [uvicorn/config.py at master · encode/uvicorn · GitHub](https://github.com/encode/uvicorn/blob/a94781dcd122b9727b85f86fcc60318eed72d223/uvicorn/config.py#L208)
