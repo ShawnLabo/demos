@@ -1,0 +1,6 @@
+export PROJECT_ID="YOUR-PROJECT-ID"
+export NEXT_PUBLIC_FIREBASE_CONFIG='Firebase Config as JSON'
+
+# --- 
+
+export TF_VAR_project_id="$PROJECT_ID"
