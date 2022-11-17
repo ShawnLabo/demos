@@ -1,0 +1,25 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - build
+      - -t
+      - $LOCATION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME:$COMMIT_SHA
+      - .
+
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - push 
+      - $LOCATION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME:$COMMIT_SHA
+
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - $REPO_NAME
+      - --image
+      - $LOCATION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME:$COMMIT_SHA
+      - --region
+      - $LOCATION
+      - --service-account
+      - $REPO_NAME@$PROJECT_ID.iam.gserviceaccount.com
